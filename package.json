@@ -20,8 +20,7 @@
     "build": "react-scripts build",
     "test": "jest --watchAll=false --passWithNoTests",
     "eject": "react-scripts eject",
-    "test-coverage": "jest--coverage --watchAll=false",
-    "prepare": "husky install"
+    "test-coverage": "jest--coverage --watchAll=false"
   },
   "eslintConfig": {
     "extends": [

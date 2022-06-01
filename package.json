@@ -18,7 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --passWithNoTests",
+    "test": "jest --watchAll=false --passWithNoTests",
     "eject": "react-scripts eject",
     "test-coverage": "jest--coverage --watchAll=false",
     "prepare": "husky install"

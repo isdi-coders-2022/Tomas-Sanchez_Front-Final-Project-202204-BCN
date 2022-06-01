@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "test": "jest --watchAll=false --passWithNoTests",
     "eject": "react-scripts eject",
-    "test-coverage": "jest--coverage --watchAll=false"
+    "test-coverage": "jest --coverage --watchAll=false --passWithNoTests "
   },
   "eslintConfig": {
     "extends": [
@@ -43,5 +43,11 @@
   },
   "devDependencies": {
     "husky": "^7.0.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "!src/index.js",
+      "!src/reportWebVitals.js"
+    ]
   }
 }

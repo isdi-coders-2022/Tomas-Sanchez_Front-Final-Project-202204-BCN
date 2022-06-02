@@ -1,7 +1,7 @@
-const userMockRegister = {
+const userMock = {
   name: "Julia",
   username: "Julie",
-  id: "123456",
+  password: "123456",
 };
 
-export default userMockRegister;
+export default userMock;

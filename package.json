@@ -22,7 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test-coverage": "react-scripts test --coverage --watchAll",
+    "test-coverage": "npm run test -- --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
@@ -50,12 +50,14 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "*.js",
-      "./**/*.js",
-      "!.eslintrc.js",
-      "!coverage/**/*.js",
-      "!./src/index.js",
-      "!./src/reportWebVitals.js"
+      "!src/index.js",
+      "!src/reportWebVitals.js",
+      "!src/setupTests.js",
+      "!src/react-app-env.d.js",
+      "!coverage/*/.js",
+      "!src/**/*.test.js",
+      "!src/**/*.test.js.snap",
+      "!src/**/*.test.js.snap"
     ]
   }
 }

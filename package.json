@@ -50,17 +50,14 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.tsx",
-      "src/**/*.ts",
-      "!src/index.tsx",
-      "!src/App.tsx",
-      "!src/**/*.test.ts",
-      "!src/reportWebVitals.ts",
-      "!src/setupTests.ts",
-      "!src/react-app-env.d.ts",
-      "!src/theme/**",
-      "!src/interfaces/**",
-      "!src/routes/**"
+      "!src/index.js",
+      "!src/reportWebVitals.js",
+      "!src/setupTests.js",
+      "!src/react-app-env.d.js",
+      "!coverage/*/.js",
+      "!src/**/*.test.js",
+      "!src/**/*.test.js.snap",
+      "!src/**/*.test.js.snap"
     ]
   }
 }

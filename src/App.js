@@ -1,14 +1,10 @@
 import React from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
-import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import LoginForm from "./components/LoginForm/LoginForm";
 
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Navigate to="/register" />} />
-        <Route path="/register" element={<RegisterPage />} />
-      </Routes>
+      <LoginForm />
     </>
   );
 }

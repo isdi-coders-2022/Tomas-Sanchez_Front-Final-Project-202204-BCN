@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { registerThunk } from "../../redux/thunks/userThunks";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import RegisterFormStyled from "./RegisterFormStyled";
 
 const RegisterForm = () => {
@@ -10,6 +10,7 @@ const RegisterForm = () => {
     username: "",
     password: "",
   };
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const [formData, setFormData] = useState(initialForm);
@@ -26,6 +27,10 @@ const RegisterForm = () => {
 
     dispatch(registerThunk(formData));
     setFormData(initialForm);
+    const token = localStorage.getItem("token");
+    if (token) {
+      navigate("/coffeeshops");
+    }
   };
   return (
     <RegisterFormStyled>

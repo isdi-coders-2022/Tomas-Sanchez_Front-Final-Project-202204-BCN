@@ -28,13 +28,11 @@ export const registerThunk = (userData) => async (dispatch) => {
   const url = `${process.env.REACT_APP_API_URL}user/register`;
 
   const { data } = await axios.post(url, userData);
-
   if (data) {
     const newUser = {
       username: data.username,
       password: userData.password,
     };
-
     dispatch(loginThunk(newUser));
   }
 

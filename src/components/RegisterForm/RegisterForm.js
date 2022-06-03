@@ -29,7 +29,7 @@ const RegisterForm = () => {
     setFormData(initialForm);
     const token = localStorage.getItem("token");
     if (token) {
-      navigate("/register");
+      navigate("/");
     }
   };
   return (

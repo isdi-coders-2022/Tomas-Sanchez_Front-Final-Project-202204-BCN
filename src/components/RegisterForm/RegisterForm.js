@@ -29,7 +29,7 @@ const RegisterForm = () => {
     setFormData(initialForm);
     const token = localStorage.getItem("token");
     if (token) {
-      navigate("/coffeeshops");
+      navigate("/register");
     }
   };
   return (
@@ -77,7 +77,9 @@ const RegisterForm = () => {
           >
             Sign Up
           </button>
-          <p>Do you have an account?</p>
+          <div className="login-form__text">
+            <span>Do you have an account?</span>
+          </div>
           <Link className="" to={"/login"}>
             Sign In
           </Link>

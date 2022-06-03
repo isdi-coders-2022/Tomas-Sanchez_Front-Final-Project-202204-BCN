@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
-const RegisterFormStyled = styled.div`
+const LoginFormStyled = styled.div`
   background-color: white;
   margin-top: 50px;
   border: 2px solid rgb(243, 244, 246);
@@ -52,7 +52,6 @@ const RegisterFormStyled = styled.div`
       font-size: 20px;
     }
   }
-
   a {
     display: flex;
     justify-content: center;
@@ -63,4 +62,4 @@ const RegisterFormStyled = styled.div`
   }
 `;
 
-export default RegisterFormStyled;
+export default LoginFormStyled;

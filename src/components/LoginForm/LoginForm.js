@@ -80,7 +80,7 @@ const LoginForm = () => {
         </div>
 
         <button className="login-form__button" type="submit">
-          Sign Up
+          Sign In
         </button>
       </form>
       <div className="login-form__text">

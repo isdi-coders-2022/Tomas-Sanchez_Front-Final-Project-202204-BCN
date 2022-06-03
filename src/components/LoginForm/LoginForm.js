@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { loginThunk } from "../../redux/thunks/userThunks";
+import LoginFormStyled from "./LoginFormStyled";
 
 const LoginForm = () => {
   const initialForm = {
@@ -25,7 +26,7 @@ const LoginForm = () => {
     const token = localStorage.getItem("token");
 
     if (token) {
-      navigate("/coffeeshops");
+      navigate("/login");
     }
   }, [navigate, userInfo]);
 
@@ -37,9 +38,14 @@ const LoginForm = () => {
   };
 
   return (
-    <>
-      {" "}
-      <form className="login-form" onSubmit={handleSubmit} noValidate>
+    <LoginFormStyled>
+      <h1>Login</h1>
+      <form
+        className="login-form"
+        onSubmit={handleSubmit}
+        autoComplete="off"
+        noValidate
+      >
         <div className="login-form__wrapper">
           <label className="login-form__label" htmlFor="username">
             Username
@@ -48,12 +54,11 @@ const LoginForm = () => {
           <div className="input-wrapper">
             <input
               className="login-form__input"
-              id="username"
               type="username"
-              autoComplete="off"
-              required
-              onChange={updateForm}
+              id="username"
               value={formData.username}
+              onChange={updateForm}
+              placeholder="Username:"
             />
           </div>
         </div>
@@ -65,12 +70,11 @@ const LoginForm = () => {
           <div>
             <input
               className="login-form__input"
-              id="password"
               type="password"
-              autoComplete="off"
-              required
-              onChange={updateForm}
+              id="password"
               value={formData.password}
+              onChange={updateForm}
+              placeholder="Password:"
             />
           </div>
         </div>
@@ -85,7 +89,7 @@ const LoginForm = () => {
       <div>
         <Link to={"/register"}>Sign Up</Link>
       </div>
-    </>
+    </LoginFormStyled>
   );
 };
 

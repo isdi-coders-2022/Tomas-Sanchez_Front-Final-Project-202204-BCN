@@ -4,20 +4,25 @@ const CoffeShopStyled = styled.div`
   .container {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin: 20px 20px 20px 20px;
   }
 
-  .coffeshop-image {
+  .coffeeshop-card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .coffeeshop-image {
     display: flex;
     justify-content: center;
   }
 
-  .coffeshop__img {
+  .coffeeshop__img {
     width: 100%;
     height: 100%;
   }
 
-  .coffeshop-info {
+  .coffeeshop-info {
     background-color: white;
     display: flex;
     font-size: 20px;

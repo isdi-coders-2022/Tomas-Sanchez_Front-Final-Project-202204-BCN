@@ -4,7 +4,7 @@ const coffeeShopsSlice = createSlice({
   name: "coffeeShops",
   initialState: [],
   reducers: {
-    loadCoffeeShops: (coffeeshops, action) => [...action.payload],
+    loadCoffeeShops: (coffeeShops, action) => [...action.payload],
   },
 });
 

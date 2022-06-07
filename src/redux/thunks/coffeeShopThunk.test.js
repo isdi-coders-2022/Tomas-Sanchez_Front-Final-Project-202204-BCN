@@ -6,16 +6,15 @@ describe("Given the loadCoffeeShopThunk function", () => {
   describe("When it's called and receives a correct token", () => {
     test("Then should call dispatch with loadCoffeeShopActionCreator and the coffeeshops received", async () => {
       const dispatch = jest.fn();
-      const returnedData = { data: ["Morrow", "Cafe de la esquina"] };
-      axios.get = jest.fn().mockReturnValue(returnedData);
+      const returnedData = ["Morrow", "Cafe de la esquina"];
+      axios.get = jest.fn().mockResolvedValueOnce({
+        data: { coffeShops: returnedData },
+        status: 200,
+      });
 
-      const expectedCoffeeShops = ["Morrow", "Cafe de la esquina"];
+      const expectedAction = loadCoffeeShopsActionCreator(returnedData);
 
-      const token = "Token";
-
-      const expectedAction = loadCoffeeShopsActionCreator(expectedCoffeeShops);
-
-      const thunk = loadCoffeeShopThunk(token);
+      const thunk = loadCoffeeShopThunk();
       await thunk(dispatch);
 
       expect(dispatch).toHaveBeenCalledWith(expectedAction);

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { loadCoffeeShopThunk } from "../../../redux/thunks/coffeeShopThunk";
-import CoffeeShop from "../CoffeeShop";
+import { loadCoffeeShopThunk } from "../../redux/thunks/coffeeShopThunk";
+import CoffeeShop from "../CoffeeShop/CoffeeShop";
 
 const CoffeeShopList = () => {
   const dispatch = useDispatch();

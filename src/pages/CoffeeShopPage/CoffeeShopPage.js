@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import CoffeeShopList from "../../components/CoffeeShop/CoffeeShopList/CoffeeShopList";
+import CoffeeShopList from "../../components/CoffeeShopList/CoffeeShopList";
 
 const CoffeeShopStyled = styled.div`
   display: flex;

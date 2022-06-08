@@ -1,7 +1,14 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import styled from "styled-components";
 import { loadCoffeeShopThunk } from "../../redux/thunks/coffeeShopThunk";
 import CoffeeShop from "../CoffeeShop/CoffeeShop";
+
+const CoffeeShopListStyled = styled.div`
+  ul {
+    list-style: none;
+  }
+`;
 
 const CoffeeShopList = () => {
   const dispatch = useDispatch();
@@ -12,7 +19,7 @@ const CoffeeShopList = () => {
   }, [dispatch]);
 
   return (
-    <>
+    <CoffeeShopListStyled>
       <ul>
         {coffeeShops.map((coffeeShop) => {
           return (
@@ -22,7 +29,7 @@ const CoffeeShopList = () => {
           );
         })}
       </ul>
-    </>
+    </CoffeeShopListStyled>
   );
 };
 

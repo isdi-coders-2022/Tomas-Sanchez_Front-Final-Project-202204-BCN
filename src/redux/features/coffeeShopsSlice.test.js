@@ -1,4 +1,6 @@
+import { mockCoffeeShop } from "../thunks/mocks/handlers";
 import coffeeShopsReducer, {
+  deleteCoffeeShopActionCreator,
   loadCoffeeShopsActionCreator,
 } from "./coffeeShopsSlice";
 
@@ -18,6 +20,23 @@ describe("Given a usersSlice reducer", () => {
       const newState = coffeeShopsReducer(initialValue, action);
 
       expect(newState).toEqual(receivedValue);
+    });
+  });
+});
+
+describe("Given the deleteCoffeeShopActionCreator", () => {
+  describe("When invoked with the id to be deleted", () => {
+    test("Then the item with the id will be deleted from the CoffeeShop list", () => {
+      const initialState = mockCoffeeShop;
+
+      const expectedState = [];
+
+      const id = "56ab0ertghrtgh6bb8";
+
+      const action = deleteCoffeeShopActionCreator(id);
+      const newState = coffeeShopsReducer(initialState, action);
+
+      expect(newState).toEqual(expectedState);
     });
   });
 });

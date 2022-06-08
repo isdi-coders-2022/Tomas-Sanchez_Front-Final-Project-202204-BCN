@@ -1,4 +1,6 @@
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
+import { deleteCoffeeShopThunk } from "../../redux/thunks/coffeeShopThunk";
 
 const ButtonContainer = styled.div`
   button {
@@ -7,10 +9,14 @@ const ButtonContainer = styled.div`
   }
 `;
 
-const Button = () => {
+const Button = ({ id: _id }) => {
+  const dispatch = useDispatch();
+  const buttonDelete = () => {
+    dispatch(deleteCoffeeShopThunk(_id));
+  };
   return (
     <ButtonContainer>
-      <button>Delete</button>
+      <button onClick={buttonDelete}>Delete</button>
     </ButtonContainer>
   );
 };

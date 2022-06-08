@@ -13,13 +13,15 @@ const CoffeeShopList = () => {
 
   return (
     <>
-      {coffeeShops.map((coffeeShop) => {
-        return (
-          <li key={coffeeShop._id}>
-            <CoffeeShop coffeShop={coffeeShop} />
-          </li>
-        );
-      })}
+      <ul>
+        {coffeeShops.map((coffeeShop) => {
+          return (
+            <li key={coffeeShop._id}>
+              <CoffeeShop coffeShop={coffeeShop} />
+            </li>
+          );
+        })}
+      </ul>
     </>
   );
 };

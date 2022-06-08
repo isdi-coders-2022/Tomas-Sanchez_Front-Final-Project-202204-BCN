@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const CoffeShopStyled = styled.div`
+const CoffeeShopStyled = styled.div`
   .container {
     display: flex;
     flex-direction: column;
@@ -31,4 +31,4 @@ const CoffeShopStyled = styled.div`
   }
 `;
 
-export default CoffeShopStyled;
+export default CoffeeShopStyled;

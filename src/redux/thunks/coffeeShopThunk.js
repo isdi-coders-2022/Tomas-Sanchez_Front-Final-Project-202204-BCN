@@ -1,5 +1,8 @@
 import axios from "axios";
-import { loadCoffeeShopsActionCreator } from "../features/coffeeShopsSlice";
+import {
+  deleteCoffeeShopActionCreator,
+  loadCoffeeShopsActionCreator,
+} from "../features/coffeeShopsSlice";
 
 export const loadCoffeeShopThunk = () => async (dispatch) => {
   const url = `${process.env.REACT_APP_API_URL}coffeeshops/list`;
@@ -17,5 +20,14 @@ export const loadCoffeeShopThunk = () => async (dispatch) => {
     }
   } catch (error) {
     return error.message;
+  }
+};
+
+export const deleteCoffeeShopThunk = (id) => async (dispatch) => {
+  const url = `${process.env.REACT_APP_API_URL}coffeeshops/${id}`;
+  const { status } = await axios.delete(url);
+
+  if (status === 200) {
+    dispatch(deleteCoffeeShopActionCreator(id));
   }
 };

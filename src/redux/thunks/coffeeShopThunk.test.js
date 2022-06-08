@@ -1,6 +1,15 @@
+import {
+  deleteCoffeeShopActionCreator,
+  loadCoffeeShopsActionCreator,
+} from "../features/coffeeShopsSlice";
+import { deleteCoffeeShopThunk, loadCoffeeShopThunk } from "./coffeeShopThunk";
+import server from "./mocks/server";
+import { mockCoffeeShop } from "./mocks/handlers";
 import axios from "axios";
-import { loadCoffeeShopsActionCreator } from "../features/coffeeShopsSlice";
-import { loadCoffeeShopThunk } from "./coffeeShopThunk";
+
+beforeEach(() => server.listen());
+afterEach(() => server.resetHandlers());
+afterAll(() => server.close());
 
 describe("Given the loadCoffeeShopThunk function", () => {
   describe("When it's called and receives a correct token", () => {
@@ -18,6 +27,20 @@ describe("Given the loadCoffeeShopThunk function", () => {
       await thunk(dispatch);
 
       expect(dispatch).toHaveBeenCalledWith(expectedAction);
+    });
+  });
+});
+
+describe("Given a deleteCoffeeShopThunk function", () => {
+  describe("When it's called", () => {
+    test("Then it should dispatch the deleteCoffeeShopActionCreator", async () => {
+      const dispatch = jest.fn();
+
+      const deleteAction = deleteCoffeeShopActionCreator(mockCoffeeShop.id);
+      const thunk = deleteCoffeeShopThunk(mockCoffeeShop.id);
+
+      await thunk(dispatch);
+      expect(dispatch).toHaveBeenCalledWith(deleteAction);
     });
   });
 });

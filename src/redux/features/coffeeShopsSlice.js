@@ -6,7 +6,7 @@ const coffeeShopsSlice = createSlice({
   reducers: {
     loadCoffeeShops: (coffeeShops, action) => [...action.payload],
     deleteCoffeeShop: (coffeeShops, action) =>
-      coffeeShops.filter((coffeeShop) => coffeeShop.id !== action.payload),
+      coffeeShops.filter((coffeeShop) => coffeeShop._id !== action.payload),
   },
 });
 

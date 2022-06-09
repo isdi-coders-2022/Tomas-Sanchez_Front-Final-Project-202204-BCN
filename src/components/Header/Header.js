@@ -5,6 +5,10 @@ const HeaderStyled = styled.header`
   display: flex;
   justify-content: center;
   background-color: #ce813a;
+  height: 100px;
+  h1 {
+    font-size: 30px;
+  }
 `;
 const Header = () => {
   return (

@@ -28,7 +28,7 @@ const RegisterForm = () => {
     dispatch(registerThunk(formData));
     setFormData(initialForm);
 
-    navigate("/login");
+    navigate("/coffeeshops");
   };
   return (
     <RegisterFormStyled>

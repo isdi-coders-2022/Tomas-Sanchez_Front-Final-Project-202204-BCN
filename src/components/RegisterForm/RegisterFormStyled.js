@@ -3,6 +3,9 @@ import styled from "@emotion/styled";
 const RegisterFormStyled = styled.div`
   background-color: white;
   margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
   border: 2px solid rgb(243, 244, 246);
   padding: 3rem 2.5rem;
   width: 448px;
@@ -52,7 +55,6 @@ const RegisterFormStyled = styled.div`
       font-size: 20px;
     }
   }
-
   a {
     display: flex;
     justify-content: center;

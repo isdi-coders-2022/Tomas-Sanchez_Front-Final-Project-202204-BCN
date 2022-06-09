@@ -9,6 +9,27 @@ export const mockCoffeeShop = [
   },
 ];
 
+export const mockCoffeeShops = [
+  {
+    id: "56ab0ertghrtfwgfh6bb8",
+    name: "CoffeeLabs",
+    adress: "calle la murciana",
+    image: "image.png",
+  },
+  {
+    id: "56ab0fweertghrtgh6bb8",
+    name: "Cafeteria el moreno",
+    adress: "calle 123",
+    image: "image.png",
+  },
+  {
+    id: "56ab0fwfeweertghrtgh6bb8",
+    name: "Cafeteria el molino",
+    adress: "calle la deriva",
+    image: "image.png",
+  },
+];
+
 export const handlers = [
   rest.post(`${process.env.REACT_APP_API_URL}user/login`, (req, res, ctx) =>
     res(ctx.status(200), ctx.json({ name: "Tomas", token: "mockToken" }))

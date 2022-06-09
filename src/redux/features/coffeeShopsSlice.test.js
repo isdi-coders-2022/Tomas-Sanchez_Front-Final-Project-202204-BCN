@@ -1,5 +1,7 @@
-import { mockCoffeeShop } from "../thunks/mocks/handlers";
+import { mockCoffeeShop, mockCoffeeShops } from "../thunks/mocks/handlers";
+import coffeeShopsSlice from "./coffeeShopsSlice";
 import coffeeShopsReducer, {
+  createCoffeeShopActionCreator,
   deleteCoffeeShopActionCreator,
   loadCoffeeShopsActionCreator,
 } from "./coffeeShopsSlice";
@@ -35,6 +37,32 @@ describe("Given the deleteCoffeeShopActionCreator", () => {
       const newState = coffeeShopsReducer(initialState, action);
 
       expect(newState).toEqual(expectedState);
+    });
+  });
+});
+
+describe("Given a createCoffeeShop reducer", () => {
+  describe("When it receives an initial state with 2 coffeeShops", () => {
+    test("Then it should return 3 coffeeShops", () => {
+      const expectedLength = 4;
+
+      const initialState = mockCoffeeShops;
+
+      const newcoffeeShop = {
+        id: "56ab0ertghrtgh6bb23e8",
+        name: "cafeteria molona",
+        adress: "calle la lloreria",
+        image: "image.png",
+      };
+
+      const createCoffeeAction = createCoffeeShopActionCreator(newcoffeeShop);
+
+      const coffeeShopState = coffeeShopsSlice(
+        initialState,
+        createCoffeeAction
+      );
+
+      expect(coffeeShopState).toHaveLength(expectedLength);
     });
   });
 });

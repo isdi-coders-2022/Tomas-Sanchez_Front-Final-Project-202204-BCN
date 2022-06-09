@@ -31,8 +31,6 @@ describe("Given the deleteCoffeeShopActionCreator", () => {
 
       const expectedState = [];
 
-      const id = "56ab0ertghrtgh6bb8";
-
       const action = deleteCoffeeShopActionCreator(mockCoffeeShop.id);
       const newState = coffeeShopsReducer(initialState, action);
 

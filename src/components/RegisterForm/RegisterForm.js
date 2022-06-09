@@ -27,10 +27,8 @@ const RegisterForm = () => {
 
     dispatch(registerThunk(formData));
     setFormData(initialForm);
-    const token = localStorage.getItem("token");
-    if (token) {
-      navigate("/coffeeshops");
-    }
+
+    navigate("/login");
   };
   return (
     <RegisterFormStyled>

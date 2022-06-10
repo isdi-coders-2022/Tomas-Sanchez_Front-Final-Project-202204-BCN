@@ -1,7 +1,7 @@
 import Button from "../Button/Button";
 import CoffeShopStyled from "./CoffeeShopStyled";
 
-const CoffeeShop = ({ coffeShop: { name, image, adress, _id } }) => {
+const CoffeeShop = ({ coffeShop: { name, image, address, _id } }) => {
   return (
     <>
       <CoffeShopStyled>
@@ -15,7 +15,7 @@ const CoffeeShop = ({ coffeShop: { name, image, adress, _id } }) => {
                 <span className="name">{name}</span>
               </div>
               <div className="info">
-                <span> {adress}</span>
+                <span> {address}</span>
                 <Button id={_id} />
               </div>
             </div>

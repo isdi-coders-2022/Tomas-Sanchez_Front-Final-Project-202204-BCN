@@ -51,7 +51,7 @@ describe("Given a createCoffeeShop reducer", () => {
       const newcoffeeShop = {
         id: "56ab0ertghrtgh6bb23e8",
         name: "cafeteria molona",
-        adress: "calle la lloreria",
+        address: "calle la lloreria",
         image: "image.png",
       };
 

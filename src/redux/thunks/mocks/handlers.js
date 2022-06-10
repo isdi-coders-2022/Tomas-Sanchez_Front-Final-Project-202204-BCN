@@ -4,7 +4,7 @@ export const mockCoffeeShop = [
   {
     id: "56ab0ertghrtgh6bb8",
     name: "Morrow",
-    adress: "calle la lloreria",
+    address: "calle la lloreria",
     image: "image.png",
   },
 ];
@@ -13,19 +13,19 @@ export const mockCoffeeShops = [
   {
     id: "56ab0ertghrtfwgfh6bb8",
     name: "CoffeeLabs",
-    adress: "calle la murciana",
+    address: "calle la murciana",
     image: "image.png",
   },
   {
     id: "56ab0fweertghrtgh6bb8",
     name: "Cafeteria el moreno",
-    adress: "calle 123",
+    address: "calle 123",
     image: "image.png",
   },
   {
     id: "56ab0fwfeweertghrtgh6bb8",
     name: "Cafeteria el molino",
-    adress: "calle la deriva",
+    address: "calle la deriva",
     image: "image.png",
   },
 ];

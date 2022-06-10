@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import CoffeeShopList from "../../components/CoffeeShopList/CoffeeShopList";
 
@@ -9,6 +10,11 @@ const CoffeeShopStyled = styled.div`
 `;
 
 const CoffeeShopPage = () => {
+  const navigate = useNavigate;
+  const token = localStorage.getItem("token");
+  if (!token) {
+    navigate("/login");
+  }
   return (
     <>
       <CoffeeShopStyled>

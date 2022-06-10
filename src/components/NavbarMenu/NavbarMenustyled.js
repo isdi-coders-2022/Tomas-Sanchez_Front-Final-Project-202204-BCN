@@ -19,7 +19,7 @@ const NavbarMenuStyled = styled.div`
     left: 0 !important;
   }
   .menu__btn {
-    position: fixed;
+    position: absolute;
     top: 20px;
     left: 20px;
     width: 26px;
@@ -47,11 +47,11 @@ const NavbarMenuStyled = styled.div`
   }
   .menu__box {
     display: block;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: -100%;
     width: 300px;
-    height: 100%;
+    height: 400px;
     margin: 0;
     padding: 80px 0;
     list-style: none;
@@ -74,6 +74,7 @@ const NavbarMenuStyled = styled.div`
 
   .hamburger-menu {
     background-color: #ce813a;
+    position: relative;
   }
 
   a {

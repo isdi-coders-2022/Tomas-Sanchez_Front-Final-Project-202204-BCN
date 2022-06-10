@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import RegisterForm from "../../components/RegisterForm/RegisterForm";
 
@@ -7,6 +8,11 @@ const RegisterPageContainer = styled.div`
 `;
 
 const RegisterPage = () => {
+  const navigate = useNavigate;
+  const token = localStorage.getItem("token");
+  if (!token) {
+    navigate("/login");
+  }
   return (
     <RegisterPageContainer>
       <RegisterForm />

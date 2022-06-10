@@ -10,7 +10,7 @@ describe("Given a CoffeeShop component", () => {
         name: "Morrow",
         image:
           "https://th.bing.com/th/id/R.b817a65e00c5132ee99b855fe08ed567?rik=Io4q5j8beStwUA&pid=ImgRaw&r=0",
-        adress: "Av. Gran via de les cortes catalanes",
+        address: "Av. Gran via de les cortes catalanes",
       };
 
       render(

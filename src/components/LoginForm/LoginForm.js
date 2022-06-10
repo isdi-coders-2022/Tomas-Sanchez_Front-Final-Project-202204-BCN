@@ -79,7 +79,11 @@ const LoginForm = () => {
           </div>
         </div>
 
-        <button className="login-form__button" type="submit">
+        <button
+          className="login-form__button"
+          type="submit"
+          disabled={formData.username === "" || formData.password === ""}
+        >
           Sign In
         </button>
       </form>

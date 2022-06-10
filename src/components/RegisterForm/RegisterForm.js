@@ -22,7 +22,7 @@ const RegisterForm = () => {
     });
   };
 
-  const register = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
 
     dispatch(registerThunk(formData));
@@ -33,7 +33,12 @@ const RegisterForm = () => {
   return (
     <RegisterFormStyled>
       <h1>Register</h1>
-      <form className="login-form" autoComplete="off" noValidate>
+      <form
+        className="login-form"
+        onSubmit={handleSubmit}
+        autoComplete="off"
+        noValidate
+      >
         <div className="login-form__wrapper">
           <label className="login-form__label" htmlFor="name">
             Name
@@ -71,7 +76,11 @@ const RegisterForm = () => {
           <button
             className="login-form__button"
             type="submit"
-            onClick={register}
+            disabled={
+              formData.name === "" ||
+              formData.username === "" ||
+              formData.password === ""
+            }
           >
             Sign Up
           </button>

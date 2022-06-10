@@ -1,5 +1,6 @@
 import axios from "axios";
 import {
+  createCoffeeShopActionCreator,
   deleteCoffeeShopActionCreator,
   loadCoffeeShopsActionCreator,
 } from "../features/coffeeShopsSlice";
@@ -29,5 +30,14 @@ export const deleteCoffeeShopThunk = (id) => async (dispatch) => {
 
   if (status === 200) {
     dispatch(deleteCoffeeShopActionCreator(id));
+  }
+};
+
+export const createCoffeeShopThunk = (formData) => async (dispatch) => {
+  const url = process.env.REACT_APP_API_URL;
+  const { data } = await axios.post(`${url}coffeeshops/`, formData);
+
+  if (data) {
+    dispatch(createCoffeeShopActionCreator(data));
   }
 };

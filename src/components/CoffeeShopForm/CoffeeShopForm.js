@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { createCoffeeShopThunk } from "../../redux/thunks/coffeeShopThunk";
+import {
+  createCoffeeShopThunk,
+  editCoffeeShopThunk,
+} from "../../redux/thunks/coffeeShopThunk";
 
 const CoffeeShopForm = () => {
   const initialForm = {
@@ -25,8 +28,10 @@ const CoffeeShopForm = () => {
 
   const register = (event) => {
     event.preventDefault();
+    formData._id
+      ? dispatch(editCoffeeShopThunk(formData._id, formData))
+      : dispatch(createCoffeeShopThunk(formData));
 
-    dispatch(createCoffeeShopThunk(formData));
     setFormData(initialForm);
 
     navigate("/coffeeshops");

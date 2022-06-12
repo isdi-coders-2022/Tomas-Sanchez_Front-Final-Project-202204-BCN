@@ -12,7 +12,7 @@ const EditButton = ({ id: _id }) => {
   const navigate = useNavigate;
 
   const handleEdit = () => {
-    navigate(`/editCoffeeShop/${_id}`);
+    navigate(`/add-new-coffeeshops/${_id}`);
   };
 
   return (

@@ -1,4 +1,5 @@
 import Button from "../Button/Button";
+import EditButton from "../EditButton/EditButton";
 import CoffeShopStyled from "./CoffeeShopStyled";
 
 const CoffeeShop = ({ coffeShop: { name, image, address, _id } }) => {
@@ -17,6 +18,7 @@ const CoffeeShop = ({ coffeShop: { name, image, address, _id } }) => {
               <div className="info">
                 <span> {address}</span>
                 <Button id={_id} />
+                <EditButton id={_id} />
               </div>
             </div>
           </div>

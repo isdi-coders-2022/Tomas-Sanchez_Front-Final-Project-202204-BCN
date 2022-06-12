@@ -23,11 +23,18 @@ const CoffeeShopStyled = styled.div`
   }
 
   .coffeeshop-info {
+    align-items: center;
+    flex-direction: column;
     background-color: white;
     display: flex;
+    gap: 20px;
     font-size: 20px;
     justify-content: space-between;
     padding-bottom: 40px;
+  }
+
+  .coffeeshop-button {
+    display: flex;
   }
 `;
 

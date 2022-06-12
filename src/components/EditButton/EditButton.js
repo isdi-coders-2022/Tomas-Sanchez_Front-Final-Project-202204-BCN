@@ -1,12 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import styled from "styled-components";
-
-const EditButtonContainer = styled.div`
-  button {
-    width: 70px;
-    height: 70px;
-  }
-`;
+import { EditButtonStyled } from "./EditButtonStyled";
 
 const EditButton = ({ id: _id }) => {
   const navigate = useNavigate;
@@ -16,9 +9,11 @@ const EditButton = ({ id: _id }) => {
   };
 
   return (
-    <EditButtonContainer>
-      <button onClick={handleEdit}>Edit</button>
-    </EditButtonContainer>
+    <EditButtonStyled>
+      <button className="button-logOut" onClick={handleEdit}>
+        Edit
+      </button>
+    </EditButtonStyled>
   );
 };
 

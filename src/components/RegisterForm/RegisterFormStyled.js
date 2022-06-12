@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 const RegisterFormStyled = styled.div`
   background-color: white;
+  height: fit-content;
   margin-top: 50px;
   margin-left: 20px;
   margin-right: 20px;

@@ -1,6 +1,10 @@
 import axios from "axios";
 import jwtDecode from "jwt-decode";
 import {
+  setLoadingOffActionCreator,
+  setLoadingOnActionCreator,
+} from "../features/ui/uiSlice";
+import {
   loginActionCreator,
   registerActionCreator,
 } from "../features/userSlice";
@@ -9,6 +13,7 @@ export const loginThunk = (userData) => async (dispatch) => {
   const url = `${process.env.REACT_APP_API_URL}user/login`;
 
   try {
+    dispatch(setLoadingOnActionCreator());
     const {
       data: { token },
     } = await axios.post(url, userData);
@@ -18,6 +23,8 @@ export const loginThunk = (userData) => async (dispatch) => {
       const { name, username } = jwtDecode(token);
 
       dispatch(loginActionCreator({ name, username }));
+
+      dispatch(setLoadingOffActionCreator());
     }
   } catch (error) {
     return error.message;

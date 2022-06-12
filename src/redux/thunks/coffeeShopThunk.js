@@ -5,12 +5,17 @@ import {
   editCoffeeShopActionCreator,
   loadCoffeeShopsActionCreator,
 } from "../features/coffeeShopsSlice";
+import {
+  setLoadingOffActionCreator,
+  setLoadingOnActionCreator,
+} from "../features/ui/uiSlice";
 
 export const loadCoffeeShopThunk = () => async (dispatch) => {
   const url = `${process.env.REACT_APP_API_URL}coffeeshops/list`;
   const token = localStorage.getItem("token");
 
   try {
+    dispatch(setLoadingOnActionCreator());
     const {
       data: { coffeShops },
     } = await axios.get(url, {
@@ -19,6 +24,9 @@ export const loadCoffeeShopThunk = () => async (dispatch) => {
 
     if (coffeShops) {
       dispatch(loadCoffeeShopsActionCreator(coffeShops));
+      setTimeout(() => {
+        dispatch(setLoadingOffActionCreator());
+      }, 3000);
     }
   } catch (error) {
     return error.message;

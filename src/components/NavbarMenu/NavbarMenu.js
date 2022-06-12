@@ -1,7 +1,15 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+
 import NavbarMenuStyled from "./NavbarMenustyled";
 
 const NavbarMenu = () => {
+  const navigate = useNavigate();
+
+  const logOut = () => {
+    localStorage.removeItem("token");
+    navigate("/");
+  };
+
   return (
     <NavbarMenuStyled>
       <div className="hamburger-menu">
@@ -23,12 +31,19 @@ const NavbarMenu = () => {
           </li>
           <li>
             <NavLink to="/">
-              <p className="menu__item">Invite Friends</p>
+              <p className="menu__item">Add New CoffeeShop</p>
             </NavLink>
           </li>
           <li>
             <NavLink to="/">
               <p className="menu__item">Rating List</p>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/login">
+              <p className="menu__item" onClick={logOut}>
+                Log Out
+              </p>
             </NavLink>
           </li>
         </ul>

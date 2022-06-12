@@ -47,7 +47,7 @@ export const editCoffeeShopThunk = (id, coffeeShopData) => async (dispatch) => {
   const url = process.env.REACT_APP_API_URL;
   const {
     data: { updatedCoffeeShop },
-  } = await axios.put(`${url}coffeeshops/edit/${id}`, coffeeShopData);
+  } = await axios.put(`${url}coffeeshops/${id}`, coffeeShopData);
 
   if (updatedCoffeeShop) {
     dispatch(editCoffeeShopActionCreator(updatedCoffeeShop));

@@ -13,7 +13,7 @@ describe("Given a NavbarMenu component", () => {
 
       const expectedHome = screen.getByText("Home");
       const expectedFavourites = screen.getByText("Favourites");
-      const expectedInviteFriends = screen.getByText("Invite Friends");
+      const expectedInviteFriends = screen.getByText("Add New CoffeeShop");
       const expectedRatingList = screen.getByText("Rating List");
 
       expect(expectedHome).toBeInTheDocument();

@@ -5,6 +5,7 @@ import {
   createCoffeeShopThunk,
   editCoffeeShopThunk,
 } from "../../redux/thunks/coffeeShopThunk";
+import CoffeeShopFormStyled from "./CoffeeShopFormStyled";
 
 const CoffeeShopForm = () => {
   const initialForm = {
@@ -38,8 +39,8 @@ const CoffeeShopForm = () => {
   };
 
   return (
-    <>
-      <h1>Register</h1>
+    <CoffeeShopFormStyled>
+      <h1>Add New CoffeShop</h1>
       <form
         className="login-form"
         onSubmit={register}
@@ -78,6 +79,8 @@ const CoffeeShopForm = () => {
               value={formData.rate}
               onChange={updateData}
               placeholder="Rate:"
+              min={0}
+              max={10}
             />
           </label>
           <label className="login-form__label" htmlFor="image">
@@ -108,7 +111,7 @@ const CoffeeShopForm = () => {
           </Link>
         </div>
       </form>
-    </>
+    </CoffeeShopFormStyled>
   );
 };
 

@@ -30,7 +30,7 @@ const NavbarMenu = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/">
+            <NavLink to="/add-new-coffeeshops">
               <p className="menu__item">Add New CoffeeShop</p>
             </NavLink>
           </li>

@@ -17,6 +17,8 @@ const CoffeeShop = ({ coffeShop: { name, image, address, _id } }) => {
               </div>
               <div className="info">
                 <span> {address}</span>
+              </div>
+              <div className="coffeeshop-button">
                 <Button id={_id} />
                 <EditButton id={_id} />
               </div>

@@ -54,6 +54,7 @@ export const createCoffeeShopThunk = (formData) => async (dispatch) => {
 
 export const editCoffeeShopThunk = (id, coffeeShopData) => async (dispatch) => {
   const url = process.env.REACT_APP_API_URL;
+
   const {
     data: { updatedCoffeeShop },
   } = await axios.put(`${url}coffeeshops/${id}`, coffeeShopData);
@@ -65,7 +66,6 @@ export const editCoffeeShopThunk = (id, coffeeShopData) => async (dispatch) => {
 
 export const getCoffeeShopThunk = (id) => async (dispatch) => {
   const url = process.env.REACT_APP_API_URL;
-  const { data: coffeeShop } = await axios.get(`${url}coffeeshops/${id}`);
-
-  dispatch(loadOneCoffeeShopActionCreator(coffeeShop));
+  const { data } = await axios.get(`${url}coffeeshops/${id}`);
+  dispatch(loadOneCoffeeShopActionCreator(data.coffeeShop));
 };

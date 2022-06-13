@@ -1,6 +1,7 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { blankStateActionCreator } from "../../redux/features/coffeeShopSlice";
 import {
   createCoffeeShopThunk,
   editCoffeeShopThunk,
@@ -20,6 +21,14 @@ const CoffeeShopForm = () => {
 
   const [formData, setFormData] = useState(initialForm);
 
+  const { coffeeShop } = useSelector((state) => state.coffeeShop);
+
+  useEffect(() => {
+    if (coffeeShop.name) {
+      setFormData(coffeeShop);
+    }
+  }, [coffeeShop]);
+
   const updateData = (event) => {
     setFormData({
       ...formData,
@@ -30,9 +39,10 @@ const CoffeeShopForm = () => {
   const register = (event) => {
     event.preventDefault();
 
-    formData.id
-      ? dispatch(editCoffeeShopThunk(formData.id, formData))
+    formData._id
+      ? dispatch(editCoffeeShopThunk(formData._id, formData))
       : dispatch(createCoffeeShopThunk(formData));
+    dispatch(blankStateActionCreator());
 
     setFormData(initialForm);
 
@@ -71,7 +81,7 @@ const CoffeeShopForm = () => {
               placeholder="Address:"
             />
           </label>
-          <label className="login-form__label" htmlFor="Rate">
+          <label className="login-form__label" htmlFor="rate">
             Rate
             <input
               className="login-form__input"

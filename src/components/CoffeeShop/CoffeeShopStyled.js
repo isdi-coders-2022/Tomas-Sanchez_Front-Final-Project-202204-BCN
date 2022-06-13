@@ -35,6 +35,7 @@ const CoffeeShopStyled = styled.div`
 
   .coffeeshop-button {
     display: flex;
+    gap: 25px;
   }
 `;
 

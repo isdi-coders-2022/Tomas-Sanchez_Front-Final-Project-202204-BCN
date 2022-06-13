@@ -15,7 +15,7 @@ describe("Given a NavbarMenu component", () => {
       const expectedFavourites = screen.getByText("Favourites");
       const expectedInviteFriends = screen.getByText("Add New CoffeeShop");
       const expectedRatingList = screen.getByText("Rating List");
-      const expectedLogOut = screen.getByText("Log Out");
+      const expectedLogOut = screen.getByText("LogOut");
 
       expect(expectedHome).toBeInTheDocument();
       expect(expectedFavourites).toBeInTheDocument();

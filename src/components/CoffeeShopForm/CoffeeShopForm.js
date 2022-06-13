@@ -29,8 +29,9 @@ const CoffeeShopForm = () => {
 
   const register = (event) => {
     event.preventDefault();
-    formData._id
-      ? dispatch(editCoffeeShopThunk(formData._id, formData))
+
+    formData.id
+      ? dispatch(editCoffeeShopThunk(formData.id, formData))
       : dispatch(createCoffeeShopThunk(formData));
 
     setFormData(initialForm);

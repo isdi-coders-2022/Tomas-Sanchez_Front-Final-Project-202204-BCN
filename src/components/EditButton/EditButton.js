@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { EditButtonStyled } from "./EditButtonStyled";
 
 const EditButton = ({ id: _id }) => {
-  const navigate = useNavigate;
+  const navigate = useNavigate();
 
   const handleEdit = () => {
     navigate(`/add-new-coffeeshops/${_id}`);

@@ -1,4 +1,5 @@
 import axios from "axios";
+import { loadOneCoffeeShopActionCreator } from "../features/coffeeShopSlice";
 import {
   createCoffeeShopActionCreator,
   deleteCoffeeShopActionCreator,
@@ -60,4 +61,11 @@ export const editCoffeeShopThunk = (id, coffeeShopData) => async (dispatch) => {
   if (updatedCoffeeShop) {
     dispatch(editCoffeeShopActionCreator(updatedCoffeeShop));
   }
+};
+
+export const getCoffeeShopThunk = (id) => async (dispatch) => {
+  const url = process.env.REACT_APP_API_URL;
+  const { data: coffeeShop } = await axios.get(`${url}coffeeshops/${id}`);
+
+  dispatch(loadOneCoffeeShopActionCreator(coffeeShop));
 };

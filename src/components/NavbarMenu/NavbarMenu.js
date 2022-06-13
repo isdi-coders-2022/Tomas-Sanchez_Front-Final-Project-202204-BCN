@@ -41,8 +41,8 @@ const NavbarMenu = () => {
           </li>
           <li>
             <NavLink to="/login">
-              <p className="menu__item" onClick={logOut}>
-                Log Out
+              <p className="button" onClick={logOut}>
+                LogOut
               </p>
             </NavLink>
           </li>

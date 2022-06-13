@@ -1,4 +1,5 @@
 import axios from "axios";
+import { toast } from "react-toastify";
 import { loadOneCoffeeShopActionCreator } from "../features/coffeeShopSlice";
 import {
   createCoffeeShopActionCreator,
@@ -27,7 +28,7 @@ export const loadCoffeeShopThunk = () => async (dispatch) => {
       dispatch(loadCoffeeShopsActionCreator(coffeShops));
       setTimeout(() => {
         dispatch(setLoadingOffActionCreator());
-      }, 3000);
+      }, 2000);
     }
   } catch (error) {
     return error.message;
@@ -36,6 +37,17 @@ export const loadCoffeeShopThunk = () => async (dispatch) => {
 
 export const deleteCoffeeShopThunk = (id) => async (dispatch) => {
   const url = `${process.env.REACT_APP_API_URL}coffeeshops/${id}`;
+
+  toast.error("You have deleted a coffee shop", {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
+
   const { status } = await axios.delete(url);
 
   if (status === 200) {
@@ -49,11 +61,31 @@ export const createCoffeeShopThunk = (formData) => async (dispatch) => {
 
   if (data) {
     dispatch(createCoffeeShopActionCreator(data));
+
+    toast.success("You have added a new coffeeshop", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   }
 };
 
 export const editCoffeeShopThunk = (id, coffeeShopData) => async (dispatch) => {
   const url = process.env.REACT_APP_API_URL;
+
+  toast.success("You have edited it correctly", {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
 
   const {
     data: { updatedCoffeeShop },

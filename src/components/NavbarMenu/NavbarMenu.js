@@ -34,11 +34,7 @@ const NavbarMenu = () => {
               <p className="menu__item">Add New CoffeeShop</p>
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/">
-              <p className="menu__item">Rating List</p>
-            </NavLink>
-          </li>
+
           <li>
             <NavLink to="/login">
               <p className="button" onClick={logOut}>

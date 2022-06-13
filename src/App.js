@@ -9,6 +9,8 @@ import CoffeeShopFormPage from "./pages/CoffeeShopFormPage/CoffeeShopFormPage";
 import { useSelector } from "react-redux";
 import LoadingPage from "./pages/LoadingPage/LoadingPage";
 import EditCoffeeShopFormPage from "./pages/EditCoffeeShopFormPage/EditCoffeeShopFormPage";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const { loaded } = useSelector(({ ui }) => ui);
@@ -16,6 +18,18 @@ function App() {
   return (
     <>
       {loaded && <LoadingPage />}
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<Navigate to="/coffeeshops" />} />
         <Route path="/login" element={<LoginPage />} />

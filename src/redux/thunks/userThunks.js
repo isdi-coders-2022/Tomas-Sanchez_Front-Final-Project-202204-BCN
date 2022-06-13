@@ -1,5 +1,6 @@
 import axios from "axios";
 import jwtDecode from "jwt-decode";
+import { toast } from "react-toastify";
 import {
   setLoadingOffActionCreator,
   setLoadingOnActionCreator,
@@ -13,10 +14,20 @@ export const loginThunk = (userData) => async (dispatch) => {
   const url = `${process.env.REACT_APP_API_URL}user/login`;
 
   try {
-    dispatch(setLoadingOnActionCreator());
+    dispatch(setLoadingOffActionCreator());
     const {
       data: { token },
     } = await axios.post(url, userData);
+
+    toast.success("You have successfully logged in!", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
 
     if (token) {
       localStorage.setItem("token", token);
@@ -24,9 +35,18 @@ export const loginThunk = (userData) => async (dispatch) => {
 
       dispatch(loginActionCreator({ name, username }));
 
-      dispatch(setLoadingOffActionCreator());
+      dispatch(setLoadingOnActionCreator());
     }
   } catch (error) {
+    toast.error("something was wrong, please try again", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
     return error.message;
   }
 };

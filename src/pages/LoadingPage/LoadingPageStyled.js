@@ -4,6 +4,12 @@ const LoadingPageContainer = styled.div`
   width: 100%;
   height: 100vh;
   z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+
   background-color: black;
   display: flex;
   align-items: center;

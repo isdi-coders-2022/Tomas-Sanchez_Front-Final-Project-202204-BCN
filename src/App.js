@@ -8,6 +8,7 @@ import LoggedControl from "./components/LoggedControl/LoggedControl";
 import CoffeeShopFormPage from "./pages/CoffeeShopFormPage/CoffeeShopFormPage";
 import { useSelector } from "react-redux";
 import LoadingPage from "./pages/LoadingPage/LoadingPage";
+import EditCoffeeShopFormPage from "./pages/EditCoffeeShopFormPage/EditCoffeeShopFormPage";
 
 function App() {
   const { loaded } = useSelector(({ ui }) => ui);
@@ -29,7 +30,15 @@ function App() {
           }
         />
         <Route
-          path="/add-new-coffeeshops"
+          path="/add-new-coffeeshops/:id"
+          element={
+            <LoggedControl>
+              <EditCoffeeShopFormPage />
+            </LoggedControl>
+          }
+        />
+        <Route
+          path="/add-new-coffeeshops/"
           element={
             <LoggedControl>
               <CoffeeShopFormPage />

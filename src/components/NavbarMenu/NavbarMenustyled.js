@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 const NavbarMenuStyled = styled.div`
+  .hamburger-menu {
+    z-index: 1;
+  }
   #menu__toggle {
     opacity: 0;
   }
@@ -48,6 +51,7 @@ const NavbarMenuStyled = styled.div`
   .menu__box {
     display: block;
     position: absolute;
+    text-align: center;
     top: 0;
     left: -100%;
     width: 300px;
@@ -79,6 +83,41 @@ const NavbarMenuStyled = styled.div`
 
   a {
     text-decoration: none;
+  }
+  .button {
+    appearance: none;
+    background-color: orange;
+    border: 2px solid #1a1a1a;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+
+    :hover {
+      box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+      transform: translateY(-2px);
+    }
+
+    :active {
+      box-shadow: none;
+      transform: translateY(0);
+    }
   }
 `;
 

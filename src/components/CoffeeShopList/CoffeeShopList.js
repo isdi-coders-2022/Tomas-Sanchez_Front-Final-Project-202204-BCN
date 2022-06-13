@@ -7,6 +7,7 @@ import CoffeeShop from "../CoffeeShop/CoffeeShop";
 const CoffeeShopListStyled = styled.div`
   ul {
     list-style: none;
+    padding: 0;
   }
 `;
 

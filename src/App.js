@@ -44,7 +44,7 @@ function App() {
           }
         />
         <Route
-          path="/add-new-coffeeshops/:id"
+          path="/edit-new-coffeeshops/:id"
           element={
             <LoggedControl>
               <EditCoffeeShopFormPage />

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { blankStateActionCreator } from "../../redux/features/coffeeShopSlice";
 import {
   createCoffeeShopThunk,
@@ -18,6 +18,17 @@ const CoffeeShopForm = () => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const { id } = useParams();
+
+  const checkIdParams = (id) => {
+    if (id) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const checkParams = checkIdParams(id);
 
   const [formData, setFormData] = useState(initialForm);
 
@@ -51,7 +62,8 @@ const CoffeeShopForm = () => {
 
   return (
     <CoffeeShopFormStyled>
-      <h1>Add New CoffeShop</h1>
+      {!checkParams && <h1>Add New CoffeShop</h1>}
+      {checkParams && <h1>EditCoffeShop</h1>}
       <form
         className="login-form"
         onSubmit={register}

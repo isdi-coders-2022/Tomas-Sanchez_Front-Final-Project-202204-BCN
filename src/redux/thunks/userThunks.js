@@ -14,15 +14,6 @@ export const loginThunk = (userData) => async (dispatch) => {
   const url = `${process.env.REACT_APP_API_URL}user/login`;
 
   try {
-    toast.success("You have successfully logged in!", {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
     dispatch(setLoadingOffActionCreator());
     const {
       data: { token },
@@ -36,6 +27,15 @@ export const loginThunk = (userData) => async (dispatch) => {
 
       dispatch(setLoadingOnActionCreator());
     }
+    toast.success("You have successfully logged in!", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   } catch (error) {
     toast.error("something was wrong, please try again", {
       position: "top-center",

@@ -1,7 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
-
 import NavbarMenuStyled from "./NavbarMenustyled";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse, faCoffee } from "@fortawesome/free-solid-svg-icons";
 const NavbarMenu = () => {
   const navigate = useNavigate();
 
@@ -19,18 +19,15 @@ const NavbarMenu = () => {
         </label>
         <div className="menu__box">
           <ul className="menu__box_list">
-            <li>
+            <li className="menu__Home">
               <NavLink to="/coffeeshops">
+                <FontAwesomeIcon icon={faHouse} className="faHouse" />
                 <p className="menu__item">Home</p>
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/">
-                <p className="menu__item">Favourites</p>
-              </NavLink>
-            </li>
-            <li>
+            <li className="menu__Coffe">
               <NavLink to="/add-new-coffeeshops">
+                <FontAwesomeIcon icon={faCoffee} className="faCoffee" />
                 <p className="menu__item">Add New CoffeeShop</p>
               </NavLink>
             </li>

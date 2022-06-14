@@ -21,14 +21,19 @@ const CoffeeShopStyled = styled.div`
     border-radius: 0px 0px 20px 20px;
     background-color: white;
     font-size: 20px;
-    height: 150px;
-    padding: 20px 0px;
+    height: 180px;
   }
 
   .coffeeshop-button {
     width: 70%;
     display: flex;
     justify-content: space-evenly;
+  }
+
+  .coffeeshop-name {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0;
   }
 `;
 

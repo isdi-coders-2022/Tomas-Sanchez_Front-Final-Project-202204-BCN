@@ -9,12 +9,12 @@ export const ButtonStyled = styled.div`
     text-align: center;
     text-decoration: none;
     color: #ffffff;
-    background-color: orange;
+    background-color: #ce813a;
     border-radius: 15px;
     font-size: 16px;
     font-weight: 600;
     box-sizing: border-box;
-    border: 2px solid #ce813a;
+    border: 2px solid orange;
     cursor: pointer;
     display: inline-block;
     line-height: normal;

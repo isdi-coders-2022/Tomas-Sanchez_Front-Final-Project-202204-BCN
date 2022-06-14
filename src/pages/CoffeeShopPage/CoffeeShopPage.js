@@ -12,6 +12,7 @@ const CoffeeShopPage = () => {
   return (
     <>
       <CoffeeShopStyled>
+        <h2>All CoffeeShop</h2>
         <CoffeeShopList />
       </CoffeeShopStyled>
     </>

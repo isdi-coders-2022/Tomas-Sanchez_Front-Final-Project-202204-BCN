@@ -2,17 +2,20 @@ import styled from "styled-components";
 
 const LoginFormStyled = styled.div`
   background-color: white;
-  height: fit-content;
-  margin-top: 70px;
+  height: 50vh;
   margin-left: 20px;
   margin-right: 20px;
   border: 2px solid rgb(243, 244, 246);
-  padding: 3rem 2.5rem;
+  padding: 2.5rem 2rem 2.5rem 2.5rem;
   width: 448px;
   border-radius: 1.5rem;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 8px 10px -6px rgba(0, 0, 0, 0.1);
 
+  h1 {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
   .login-form {
     &__wrapper {
       padding-bottom: 1rem;
@@ -34,6 +37,7 @@ const LoginFormStyled = styled.div`
 
     &__button {
       margin-top: 1rem;
+      margin-bottom: 1rem;
       width: 100%;
       padding: 0.75rem 1rem;
       font-weight: 500;

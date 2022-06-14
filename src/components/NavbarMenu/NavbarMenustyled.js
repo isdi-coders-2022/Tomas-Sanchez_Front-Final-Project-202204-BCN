@@ -3,6 +3,8 @@ import styled from "styled-components";
 const NavbarMenuStyled = styled.div`
   .hamburger-menu {
     z-index: 1;
+    background-color: #ce813a;
+    position: relative;
   }
   #menu__toggle {
     opacity: 0;
@@ -23,9 +25,9 @@ const NavbarMenuStyled = styled.div`
   }
   .menu__btn {
     position: absolute;
-    top: 20px;
+    top: 30px;
     left: 20px;
-    width: 26px;
+    width: 30px;
     height: 26px;
     cursor: pointer;
     z-index: 1;
@@ -49,19 +51,24 @@ const NavbarMenuStyled = styled.div`
     top: 8px;
   }
   .menu__box {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    text-align: center;
     top: 0;
     left: -100%;
     width: 300px;
-    height: 400px;
     margin: 0;
-    padding: 80px 0;
+    padding: 20px 0;
     list-style: none;
     background-color: #b7bbb4;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     transition-duration: 0.25s;
+
+    .menu__box_list {
+      list-style: none;
+    }
   }
   .menu__item {
     display: block;
@@ -76,15 +83,11 @@ const NavbarMenuStyled = styled.div`
     background-color: #cfd8dc;
   }
 
-  .hamburger-menu {
-    background-color: #ce813a;
-    position: relative;
-  }
-
   a {
     text-decoration: none;
   }
   .button {
+    width: 80%;
     appearance: none;
     background-color: orange;
     border: 2px solid #1a1a1a;
@@ -92,15 +95,8 @@ const NavbarMenuStyled = styled.div`
     box-sizing: border-box;
     color: #ffffff;
     cursor: pointer;
-    display: inline-block;
     font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 0;
-    min-height: 60px;
-    min-width: 0;
-    outline: none;
-    padding: 16px 24px;
+    margin-top: auto;
     text-align: center;
     text-decoration: none;
     transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);

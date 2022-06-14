@@ -14,11 +14,6 @@ export const loginThunk = (userData) => async (dispatch) => {
   const url = `${process.env.REACT_APP_API_URL}user/login`;
 
   try {
-    dispatch(setLoadingOffActionCreator());
-    const {
-      data: { token },
-    } = await axios.post(url, userData);
-
     toast.success("You have successfully logged in!", {
       position: "top-center",
       autoClose: 5000,
@@ -28,6 +23,10 @@ export const loginThunk = (userData) => async (dispatch) => {
       draggable: true,
       progress: undefined,
     });
+    dispatch(setLoadingOffActionCreator());
+    const {
+      data: { token },
+    } = await axios.post(url, userData);
 
     if (token) {
       localStorage.setItem("token", token);

@@ -9,7 +9,7 @@ const CoffeeShopStyled = styled.div`
   text-align: center;
 
   h2 {
-    margin-top: 20px;
+    margin-top: -20px;
     margin-bottom: -20px;
   }
 `;

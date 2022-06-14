@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const NavbarMenuStyled = styled.div`
   .hamburger-menu {
-    z-index: 1;
     background-color: #ce813a;
     position: relative;
   }
@@ -30,7 +29,7 @@ const NavbarMenuStyled = styled.div`
     width: 30px;
     height: 26px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 3;
   }
   .menu__btn > span,
   .menu__btn > span::before,
@@ -39,7 +38,7 @@ const NavbarMenuStyled = styled.div`
     position: absolute;
     width: 100%;
     height: 4px;
-    background-color: black;
+    background-color: white;
     transition-duration: 0.25s;
   }
   .menu__btn > span::before {
@@ -65,7 +64,7 @@ const NavbarMenuStyled = styled.div`
     background-color: #b7bbb4;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     transition-duration: 0.25s;
-
+    z-index: 2;
     .menu__box_list {
       list-style: none;
     }
@@ -73,7 +72,7 @@ const NavbarMenuStyled = styled.div`
   .menu__item {
     display: block;
     padding: 12px 24px;
-    color: black;
+    color: white;
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
@@ -90,7 +89,7 @@ const NavbarMenuStyled = styled.div`
     width: 80%;
     appearance: none;
     background-color: orange;
-    border: 2px solid #1a1a1a;
+    border: 2px solid #ce813a;
     border-radius: 15px;
     box-sizing: border-box;
     color: #ffffff;
@@ -114,6 +113,9 @@ const NavbarMenuStyled = styled.div`
       box-shadow: none;
       transform: translateY(0);
     }
+  }
+  p {
+    color: white;
   }
 `;
 

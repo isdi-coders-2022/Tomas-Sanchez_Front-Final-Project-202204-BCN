@@ -1,7 +1,6 @@
 body {
   margin: 0;
-  font-family: "Mali", cursive;
-  font-family: "Roboto", sans-serif;
+  font-family: "Mali", cursive, "Roboto", sans-serif;
   font-size: 30px;
   background-color: rgb(203, 203, 203);
   color: #000000;

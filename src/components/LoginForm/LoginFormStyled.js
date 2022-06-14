@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const LoginFormStyled = styled.div`
   background-color: white;
-  height: 50vh;
+  min-height: 50vh;
   margin-left: 20px;
   margin-right: 20px;
   border: 2px solid rgb(243, 244, 246);

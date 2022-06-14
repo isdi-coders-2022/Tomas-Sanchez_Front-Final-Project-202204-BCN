@@ -11,6 +11,7 @@ import LoadingPage from "./pages/LoadingPage/LoadingPage";
 import EditCoffeeShopFormPage from "./pages/EditCoffeeShopFormPage/EditCoffeeShopFormPage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 function App() {
   const { loaded } = useSelector(({ ui }) => ui);
@@ -19,6 +20,16 @@ function App() {
     <>
       {loaded && <LoadingPage />}
 
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        draggable
+        pauseOnHover
+      />
       <Routes>
         <Route path="/" element={<Navigate to="/coffeeshops" />} />
         <Route path="/login" element={<LoginPage />} />
@@ -48,17 +59,8 @@ function App() {
             </LoggedControl>
           }
         />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        draggable
-        pauseOnHover
-      />
     </>
   );
 }

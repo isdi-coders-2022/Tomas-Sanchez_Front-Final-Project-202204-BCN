@@ -20,7 +20,7 @@ const EditCoffeeShopFormPage = () => {
 
   return (
     <EditCoffeeShopFormPageContainer>
-      <h2>Edit a CoffeeShop</h2>
+      <h2>Tomas Café?</h2>
       <CoffeeShopForm />
     </EditCoffeeShopFormPageContainer>
   );

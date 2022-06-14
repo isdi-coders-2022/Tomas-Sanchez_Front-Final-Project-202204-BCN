@@ -4,38 +4,31 @@ const CoffeeShopStyled = styled.div`
   .container {
     display: flex;
     flex-direction: column;
-    margin: 20px 20px 20px 20px;
-  }
-
-  .coffeeshop-card {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .coffeeshop-image {
-    display: flex;
     justify-content: center;
+    padding: 40px;
   }
 
   .coffeeshop__img {
-    width: 100%;
-    height: 100%;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
   }
 
   .coffeeshop-info {
-    align-items: center;
-    flex-direction: column;
-    background-color: white;
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0px 0px 20px 20px;
+    background-color: white;
     font-size: 20px;
-    justify-content: space-between;
-    padding-bottom: 40px;
+    height: 150px;
+    padding: 20px 0px;
   }
 
   .coffeeshop-button {
+    width: 70%;
     display: flex;
-    gap: 25px;
+    justify-content: space-evenly;
   }
 `;
 

@@ -17,32 +17,30 @@ const NavbarMenu = () => {
         <label className="menu__btn" htmlFor="menu__toggle">
           <span></span>
         </label>
-
-        <ul className="menu__box">
-          <li>
-            <NavLink to="/coffeeshops">
-              <p className="menu__item">Home</p>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/">
-              <p className="menu__item">Favourites</p>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/add-new-coffeeshops">
-              <p className="menu__item">Add New CoffeeShop</p>
-            </NavLink>
-          </li>
-
-          <li>
+        <div className="menu__box">
+          <ul className="menu__box_list">
+            <li>
+              <NavLink to="/coffeeshops">
+                <p className="menu__item">Home</p>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/">
+                <p className="menu__item">Favourites</p>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/add-new-coffeeshops">
+                <p className="menu__item">Add New CoffeeShop</p>
+              </NavLink>
+            </li>
+          </ul>
+          <div className="button">
             <NavLink to="/login">
-              <p className="button" onClick={logOut}>
-                LogOut
-              </p>
+              <p onClick={logOut}>LogOut</p>
             </NavLink>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </NavbarMenuStyled>
   );

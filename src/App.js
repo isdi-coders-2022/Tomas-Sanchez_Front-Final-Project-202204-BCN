@@ -18,18 +18,7 @@ function App() {
   return (
     <>
       {loaded && <LoadingPage />}
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
-      <ToastContainer />
+
       <Routes>
         <Route path="/" element={<Navigate to="/coffeeshops" />} />
         <Route path="/login" element={<LoginPage />} />
@@ -60,6 +49,16 @@ function App() {
           }
         />
       </Routes>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        draggable
+        pauseOnHover
+      />
     </>
   );
 }

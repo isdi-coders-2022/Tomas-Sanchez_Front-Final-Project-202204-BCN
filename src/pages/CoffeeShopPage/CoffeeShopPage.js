@@ -6,16 +6,20 @@ const CoffeeShopStyled = styled.div`
   justify-content: center;
   list-style: none;
   flex-direction: column;
+  text-align: center;
+
+  h2 {
+    margin-top: 20px;
+    margin-bottom: -20px;
+  }
 `;
 
 const CoffeeShopPage = () => {
   return (
-    <>
-      <CoffeeShopStyled>
-        <h2>All CoffeeShop</h2>
-        <CoffeeShopList />
-      </CoffeeShopStyled>
-    </>
+    <CoffeeShopStyled>
+      <h2>All CoffeeShop</h2>
+      <CoffeeShopList />
+    </CoffeeShopStyled>
   );
 };
 

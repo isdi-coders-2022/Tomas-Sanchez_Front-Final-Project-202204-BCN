@@ -7,6 +7,7 @@ const LoadingPage = () => {
         <div className="ball"></div>
         <div className="ball"></div>
         <div className="ball"></div>
+        <span>LOADING...</span>
       </div>
     </LoadingPageContainer>
   );

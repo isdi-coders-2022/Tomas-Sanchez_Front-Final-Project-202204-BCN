@@ -1,6 +1,8 @@
 import Button from "../Button/Button";
 import EditButton from "../EditButton/EditButton";
 import CoffeShopStyled from "./CoffeeShopStyled";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationPin } from "@fortawesome/free-solid-svg-icons";
 
 const CoffeeShop = ({ coffeShop: { name, image, address, _id } }) => {
   return (
@@ -12,6 +14,7 @@ const CoffeeShop = ({ coffeShop: { name, image, address, _id } }) => {
             <span>{name}</span>
           </div>
           <div className="info">
+            <FontAwesomeIcon icon={faLocationPin} />
             <span> {address}</span>
           </div>
           <div className="coffeeshop-button">

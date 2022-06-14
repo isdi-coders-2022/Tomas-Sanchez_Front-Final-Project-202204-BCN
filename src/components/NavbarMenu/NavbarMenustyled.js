@@ -88,7 +88,7 @@ const NavbarMenuStyled = styled.div`
   .button {
     width: 80%;
     appearance: none;
-    background-color: orange;
+    background-color: #ce813a;
     border: 2px solid #ce813a;
     border-radius: 15px;
     box-sizing: border-box;
@@ -116,6 +116,26 @@ const NavbarMenuStyled = styled.div`
   }
   p {
     color: white;
+  }
+
+  .menu__Home {
+    a {
+      display: flex;
+      align-items: center;
+    }
+    .faHouse {
+      color: #ce813a;
+    }
+  }
+
+  .menu__Coffe {
+    a {
+      display: flex;
+      align-items: center;
+    }
+    .faCoffee {
+      color: #ce813a;
+    }
   }
 `;
 

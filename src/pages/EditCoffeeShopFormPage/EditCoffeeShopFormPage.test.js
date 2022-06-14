@@ -7,7 +7,7 @@ import EditCoffeeShopFormPage from "./EditCoffeeShopFormPage";
 describe("Given a EditCoffeeShopForm Page", () => {
   describe("When it's invoked", () => {
     test("Then it should render the text 'Edit a CoffeeShop'", () => {
-      const expectedText = "Edit a CoffeeShop";
+      const expectedText = "Tomas Café?";
 
       render(
         <Provider store={store}>

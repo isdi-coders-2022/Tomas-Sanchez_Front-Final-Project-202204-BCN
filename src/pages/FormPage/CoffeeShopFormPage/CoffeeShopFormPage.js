@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import CoffeeShopForm from "../../components/CoffeeShopForm/CoffeeShopForm";
+import CoffeeShopForm from "../../../components/CoffeeShopForm/CoffeeShopForm";
 
 const CoffeeShopFormPageContainer = styled.div`
   display: flex;

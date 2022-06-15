@@ -5,13 +5,13 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import Header from "./components/Header/Header";
 import LoggedControl from "./components/LoggedControl/LoggedControl";
-import CoffeeShopFormPage from "./pages/CoffeeShopFormPage/CoffeeShopFormPage";
 import { useSelector } from "react-redux";
 import LoadingPage from "./pages/LoadingPage/LoadingPage";
-import EditCoffeeShopFormPage from "./pages/EditCoffeeShopFormPage/EditCoffeeShopFormPage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
+import EditCoffeeShopFormPage from "./pages/FormPage/EditCoffeeShopFormPage/EditCoffeeShopFormPage";
+import CoffeeShopFormPage from "./pages/FormPage/CoffeeShopFormPage/CoffeeShopFormPage";
 
 function App() {
   const { loaded } = useSelector(({ ui }) => ui);

@@ -126,7 +126,8 @@ const CoffeeShopForm = () => {
               formData.image === ""
             }
           >
-            Add
+            {!checkParams && <>Add </>}
+            {checkParams && <>Edit</>}
           </button>
 
           <Link className="" to={"/coffeeshops"}>

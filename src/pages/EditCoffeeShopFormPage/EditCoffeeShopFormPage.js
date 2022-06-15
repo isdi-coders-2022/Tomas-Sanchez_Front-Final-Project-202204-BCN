@@ -6,7 +6,9 @@ import CoffeeShopForm from "../../components/CoffeeShopForm/CoffeeShopForm";
 import { getCoffeeShopThunk } from "../../redux/thunks/coffeeShopThunk";
 
 const EditCoffeeShopFormPageContainer = styled.div`
-  text-align: center;
+  a {
+    font-size: 20px;
+  }
 `;
 
 const EditCoffeeShopFormPage = () => {
@@ -20,7 +22,6 @@ const EditCoffeeShopFormPage = () => {
 
   return (
     <EditCoffeeShopFormPageContainer>
-      <h2>Tomas Café?</h2>
       <CoffeeShopForm />
     </EditCoffeeShopFormPageContainer>
   );

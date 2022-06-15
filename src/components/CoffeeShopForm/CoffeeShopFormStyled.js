@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const CoffeeShopFormStyled = styled.div`
   background-color: white;
-  height: 75vh;
   margin-left: 20px;
   margin-right: 20px;
   border: 2px solid rgb(243, 244, 246);

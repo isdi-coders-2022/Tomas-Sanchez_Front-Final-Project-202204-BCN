@@ -98,6 +98,8 @@ export const editCoffeeShopThunk = (id, coffeeShopData) => async (dispatch) => {
 
 export const getCoffeeShopThunk = (id) => async (dispatch) => {
   const url = process.env.REACT_APP_API_URL;
-  const { data } = await axios.get(`${url}coffeeshops/${id}`);
-  dispatch(loadOneCoffeeShopActionCreator(data.coffeeShop));
+  const {
+    data: { coffeShop },
+  } = await axios.get(`${url}coffeeshops/${id}`);
+  dispatch(loadOneCoffeeShopActionCreator(coffeShop));
 };

@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { loginThunk } from "../../redux/thunks/userThunks";
 import LoginFormStyled from "./LoginFormStyled";
 
@@ -12,8 +12,6 @@ const LoginForm = () => {
 
   const [formData, setFormData] = useState(initialForm);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const userInfo = useSelector((state) => state.user);
 
   const updateForm = (event) => {
     setFormData({
@@ -21,14 +19,6 @@ const LoginForm = () => {
       [event.target.id]: event.target.value,
     });
   };
-
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-
-    if (token) {
-      navigate("/coffeeshops");
-    }
-  }, [navigate, userInfo]);
 
   const handleSubmit = (event) => {
     event.preventDefault();

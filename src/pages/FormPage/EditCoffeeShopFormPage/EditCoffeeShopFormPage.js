@@ -1,15 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import styled from "styled-components";
-import CoffeeShopForm from "../../components/CoffeeShopForm/CoffeeShopForm";
-import { getCoffeeShopThunk } from "../../redux/thunks/coffeeShopThunk";
-
-const EditCoffeeShopFormPageContainer = styled.div`
-  a {
-    font-size: 20px;
-  }
-`;
+import CoffeeShopForm from "../../../components/CoffeeShopForm/CoffeeShopForm";
+import { getCoffeeShopThunk } from "../../../redux/thunks/coffeeShopThunk";
+import { CoffeeShopStyle } from "../CoffeeShopStyle";
 
 const EditCoffeeShopFormPage = () => {
   const { id } = useParams();
@@ -21,9 +15,9 @@ const EditCoffeeShopFormPage = () => {
   }, [dispatch, id]);
 
   return (
-    <EditCoffeeShopFormPageContainer>
+    <CoffeeShopStyle>
       <CoffeeShopForm />
-    </EditCoffeeShopFormPageContainer>
+    </CoffeeShopStyle>
   );
 };
 

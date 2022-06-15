@@ -22,7 +22,7 @@ const NotFoundPage = () => {
       <Header />
       <NotFoundPageStyled>
         <h1>404</h1>
-        <p>COFFE NOT FOUND</p>
+        <p>COFFEE NOT FOUND</p>
 
         <NavLink to={"/coffeeshops"}>Return to Home</NavLink>
       </NotFoundPageStyled>

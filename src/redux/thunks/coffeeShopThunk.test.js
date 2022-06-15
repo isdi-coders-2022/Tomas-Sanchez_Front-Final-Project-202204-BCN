@@ -1,13 +1,11 @@
 import {
   createCoffeeShopActionCreator,
   deleteCoffeeShopActionCreator,
-  editCoffeeShopActionCreator,
   loadCoffeeShopsActionCreator,
 } from "../features/coffeeShopsSlice";
 import {
   createCoffeeShopThunk,
   deleteCoffeeShopThunk,
-  editCoffeeShopThunk,
   getCoffeeShopThunk,
   loadCoffeeShopThunk,
 } from "./coffeeShopThunk";
@@ -61,7 +59,7 @@ describe("Given a getCoffeeShopThunk function", () => {
 
       axios.get = jest.fn().mockResolvedValue({
         data: {
-          coffeShop: {
+          coffeeShop: {
             id: "56ab0ertghrtgh6bb8",
             name: "Morrow",
             address: "calle la lloreria",
@@ -85,7 +83,7 @@ describe("Given a getCoffeeShopThunk function", () => {
   });
 });
 
-describe("Given the createPropertyThunk thunk", () => {
+describe("Given the createCoffeeShopThunk thunk", () => {
   describe("When it receives a CoffeeShop and data from response api", () => {
     test("Then it should call dispatch with createCoffeeShopActionCreator", async () => {
       const newPost = mockCoffeeShop;

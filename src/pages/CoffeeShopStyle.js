@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import CoffeeShopForm from "../../components/CoffeeShopForm/CoffeeShopForm";
 
-const CoffeeShopFormPageContainer = styled.div`
+export const CoffeeShopStyle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,13 +16,3 @@ const CoffeeShopFormPageContainer = styled.div`
     font-size: 20px;
   }
 `;
-
-const CoffeeShopFormPage = () => {
-  return (
-    <CoffeeShopFormPageContainer>
-      <CoffeeShopForm />
-    </CoffeeShopFormPageContainer>
-  );
-};
-
-export default CoffeeShopFormPage;

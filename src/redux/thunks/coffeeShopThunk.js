@@ -62,7 +62,7 @@ export const createCoffeeShopThunk = (formData) => async (dispatch) => {
   if (data) {
     dispatch(createCoffeeShopActionCreator(data));
 
-    toast.success("You have added a new coffeeshop", {
+    toast.success("You have added a new Coffee Shop", {
       position: "top-center",
       autoClose: 5000,
       hideProgressBar: false,

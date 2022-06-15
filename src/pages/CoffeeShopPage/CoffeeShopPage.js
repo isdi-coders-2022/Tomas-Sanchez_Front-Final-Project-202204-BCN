@@ -17,7 +17,7 @@ const CoffeeShopStyled = styled.div`
 const CoffeeShopPage = () => {
   return (
     <CoffeeShopStyled>
-      <h2>All CoffeeShop</h2>
+      <h2>All Coffee Shops</h2>
       <CoffeeShopList />
     </CoffeeShopStyled>
   );
